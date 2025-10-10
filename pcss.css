@@ -1,0 +1,58 @@
+/* --- Project Page Specific Styles --- */
+body {
+    /* Ensure navbar doesn't hide content */
+    padding-top: 80px; 
+}
+
+.project-main {
+    padding: 40px 0;
+}
+
+.project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--accent-gold);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 1.1rem;
+    color: var(--accent-gold);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
