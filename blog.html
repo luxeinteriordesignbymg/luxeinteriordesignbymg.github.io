@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Luxe Interior Design by MG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .blog-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 20px 80px;
+        }
+
+        .blog-post {
+            margin-bottom: 80px;
+            background: #fff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .blog-post:hover img {
+            transform: scale(1.02);
+        }
+
+        .blog-post-content h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .blog-post-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #555;
+        }
+
+        .blog-post-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: var(--text-dark);
+        }
+
+        .blog-post-content ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .blog-post-content li {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .blog-quote {
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 20px;
+            font-style: italic;
+            margin: 30px 0;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post-content h2 {
+                font-size: 2rem;
+            }
+
+            .blog-post img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">Luxe Interior Design</a>
+            <nav class="nav-menu">
+                <a href="index.html#hero">HOME</a>
+                <a href="index.html#about">ABOUT</a>
+                <a href="index.html#services">SERVICES</a>
+                <a href="assets/pdf/Luxe Interior Design by MG process.pdf" target="_blank">PROCESS</a>
+                <a href="index.html#portfolio">PROJECTS</a>
+                <a href="blog.html">BLOG</a>
+                <a href="index.html#contact">CONTACT</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/luxeinteriordesignbymg/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="mailto:luxeinteriordesignbymg@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <button class="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="blog-container">
+            <!-- Blog Post 1 -->
+            <article class="blog-post">
+                <img src="assets/img/blog/consultation.png" alt="Interior Designer Meeting">
+                <div class="blog-post-content">
+                    <h2>How to Hire the Right Interior Designer for Your Home Renovation</h2>
+                    <p>Hiring an interior designer is about more than finding someone whose style you like. For a
+                        renovation or full-home project, the right designer brings clarity, structure, and expertise
+                        that can make the entire process smoother and more enjoyable.</p>
+                    <p>As a full service interior design studio, we craft residential and commercial spaces through a
+                        well refined and intentional design process, from concept to completion.</p>
+
+                    <h3>What Does an Interior Designer Actually Do?</h3>
+                    <p>Many homeowners aren’t quite sure what an interior designer does or how their role differs from a
+                        decorator or contractor. An interior designer helps plan layouts, select materials and finishes,
+                        manage details, and guide decisions so your home functions beautifully and cohesively. For
+                        renovation projects, this often includes space planning, construction coordination, and sourcing
+                        furnishings and materials.</p>
+                    <p>Guided by years of experience and deep design knowledge, we make considered interior design
+                        decisions that honor each investment while tailoring every finish and architectural choice to
+                        the unique needs of each project.</p>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-post">
+                <img src="assets/img/blog/moodboard.png" alt="Design Moodboard">
+                <div class="blog-post-content">
+                    <h2>Questions to Ask Before Hiring an Interior Designer</h2>
+                    <p>Before committing, it’s important to understand how a designer works and whether their approach
+                        aligns with your expectations. Clear answers to these questions signal professionalism and
+                        experience.</p>
+
+                    <h3>Key Questions to Ask Before Your First Consultation</h3>
+                    <ul>
+                        <li>What is your design process from start to finish?</li>
+                        <li>How are projects structured and priced?</li>
+                        <li>How involved will I be in the decision-making process?</li>
+                        <li>What does communication look like throughout the project?</li>
+                        <li>How are design decisions, changes, and approvals managed throughout the project?</li>
+                    </ul>
+                    <div class="blog-quote">
+                        "Understanding this upfront creates clarity around timelines, budgets, and communication,
+                        leading to a more seamless design experience."
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-post">
+                <img src="assets/img/blog/renovation.png" alt="Renovation Site">
+                <div class="blog-post-content">
+                    <h2>Common Mistakes Homeowners Make When Hiring a Designer</h2>
+                    <p>One of the biggest mistakes homeowners make is choosing a designer based on photos alone. While
+                        aesthetics matter, process and communication are just as important. Avoiding these mistakes
+                        early can save time, money, and stress.</p>
+
+                    <h3>Mistakes That Can Impact Budget, Timeline, and Communication</h3>
+                    <ul>
+                        <li>Not understanding the full scope of services</li>
+                        <li>Assuming timelines without discussing them</li>
+                        <li>Waiting too long to bring a designer into the project</li>
+                    </ul>
+                    <p>One common scenario we see is a finish or material change requested late in a project. While it
+                        may seem minor, new materials must be re-sourced, confirmed for availability, ordered, and
+                        shipped, often impacting the overall timeline more than clients expect.</p>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="blog-post">
+                <div class="blog-post-content">
+                    <h2>Signs You’ve Found the Right Interior Designer</h2>
+                    <p>The right designer will make the process feel clear, not confusing. These indicators usually
+                        point to a professional who can manage both the creative and logistical sides of a project.</p>
+
+                    <h3>What a Well-Run Design Process Feels Like</h3>
+                    <ul>
+                        <li>A clearly defined process</li>
+                        <li>Transparent expectations around pricing and timelines</li>
+                        <li>Strong communication and organization</li>
+                        <li>Confidence in guiding decisions without pressure</li>
+                    </ul>
+                    <p>We prioritize clarity throughout the design process. As the project progresses, clients often
+                        feel reassured and supported, confident that both the creative vision and logistical details are
+                        being handled seamlessly.</p>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article class="blog-post">
+                <div class="blog-post-content">
+                    <h2>What Working With Our Interior Design Studio Looks Like</h2>
+                    <p>Every design firm works differently, which is why understanding the process matters. At our
+                        studio, we guide clients through a structured design process that prioritizes clarity,
+                        collaboration, and thoughtful execution. From the initial consultation through final
+                        installation, our goal is to create spaces that reflect your lifestyle while managing the
+                        details along the way.</p>
+                    <p>Our design philosophy centers on clarity and thoughtful execution. Projects move through a
+                        refined process, from concept and space planning to detailed documentation and final
+                        installation, designed for clients seeking a full-service, highly considered interior design
+                        experience.</p>
+
+                    <h3>How to Get Started</h3>
+                    <p>The first step is typically a consultation, where you’ll discuss your goals, timeline, and scope
+                        of work. This allows both you and the designer to determine if the fit is right before moving
+                        forward.</p>
+                    <p>If you’re planning a home renovation and want expert guidance from the start, we invite you to
+                        explore our services or schedule a consultation. Consultations are scheduled through our website
+                        and allow both parties to determine the best path forward.</p>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="index.html#contact" class="cta-button">Book a Consultation</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Luxe Interior Design By MG.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/luxeinteriordesignbymg/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="mailto:luxeinteriordesignbymg@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
