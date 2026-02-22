@@ -27,6 +27,7 @@
             flex-direction: column;
             gap: 30px;
             transition: transform 0.3s ease;
+            position: relative;
         }
 
         .blog-post:hover {
@@ -85,6 +86,110 @@
             color: #666;
         }
 
+        /* --- Read More & Truncation --- */
+        .blog-post-full {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .blog-post-full.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .read-more-btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #FFFFFF;
+            padding: 10px 25px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: 2px solid var(--accent-gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        .read-more-btn:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+        }
+
+        /* --- Modal Styles --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            border-radius: 5px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content h3 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+        }
+
+        .modal-content p {
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--text-dark);
+        }
+
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .email-form input {
+            padding: 12px;
+            border: 1px solid var(--border-light);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .email-form input:focus {
+            border-color: var(--accent-gold);
+        }
+
         @media (max-width: 768px) {
             .blog-post-content h2 {
                 font-size: 2rem;
@@ -124,123 +229,141 @@
 
     <main>
         <div class="blog-container">
-            <!-- Blog Post 1 -->
-            <article class="blog-post">
+            <!-- Main Unified Blog Post -->
+            <article class="blog-post" id="post-1">
                 <img src="assets/img/blog/consultation.png" alt="Interior Designer Meeting">
                 <div class="blog-post-content">
                     <h2>How to Hire the Right Interior Designer for Your Home Renovation</h2>
-                    <p>Hiring an interior designer is about more than finding someone whose style you like. For a
-                        renovation or full-home project, the right designer brings clarity, structure, and expertise
-                        that can make the entire process smoother and more enjoyable.</p>
-                    <p>As a full service interior design studio, we craft residential and commercial spaces through a
-                        well refined and intentional design process, from concept to completion.</p>
 
-                    <h3>What Does an Interior Designer Actually Do?</h3>
-                    <p>Many homeowners aren’t quite sure what an interior designer does or how their role differs from a
-                        decorator or contractor. An interior designer helps plan layouts, select materials and finishes,
-                        manage details, and guide decisions so your home functions beautifully and cohesively. For
-                        renovation projects, this often includes space planning, construction coordination, and sourcing
-                        furnishings and materials.</p>
-                    <p>Guided by years of experience and deep design knowledge, we make considered interior design
-                        decisions that honor each investment while tailoring every finish and architectural choice to
-                        the unique needs of each project.</p>
-                </div>
-            </article>
-
-            <!-- Blog Post 2 -->
-            <article class="blog-post">
-                <img src="assets/img/blog/moodboard.png" alt="Design Moodboard">
-                <div class="blog-post-content">
-                    <h2>Questions to Ask Before Hiring an Interior Designer</h2>
-                    <p>Before committing, it’s important to understand how a designer works and whether their approach
-                        aligns with your expectations. Clear answers to these questions signal professionalism and
-                        experience.</p>
-
-                    <h3>Key Questions to Ask Before Your First Consultation</h3>
-                    <ul>
-                        <li>What is your design process from start to finish?</li>
-                        <li>How are projects structured and priced?</li>
-                        <li>How involved will I be in the decision-making process?</li>
-                        <li>What does communication look like throughout the project?</li>
-                        <li>How are design decisions, changes, and approvals managed throughout the project?</li>
-                    </ul>
-                    <div class="blog-quote">
-                        "Understanding this upfront creates clarity around timelines, budgets, and communication,
-                        leading to a more seamless design experience."
+                    <div class="blog-preview">
+                        <p>Hiring an interior designer is about more than finding someone whose style you like. For a
+                            renovation or full-home project, the right designer brings clarity, structure, and expertise
+                            that can make the entire process smoother and more enjoyable.</p>
+                        <p>As a full service interior design studio, we craft residential and commercial spaces through
+                            a
+                            well refined and intentional design process, from concept to completion.</p>
                     </div>
-                </div>
-            </article>
 
-            <!-- Blog Post 3 -->
-            <article class="blog-post">
-                <img src="assets/img/blog/renovation.png" alt="Renovation Site">
-                <div class="blog-post-content">
-                    <h2>Common Mistakes Homeowners Make When Hiring a Designer</h2>
-                    <p>One of the biggest mistakes homeowners make is choosing a designer based on photos alone. While
-                        aesthetics matter, process and communication are just as important. Avoiding these mistakes
-                        early can save time, money, and stress.</p>
+                    <div class="blog-post-full">
+                        <h3>What Does an Interior Designer Actually Do?</h3>
+                        <p>Many homeowners aren’t quite sure what an interior designer does or how their role differs
+                            from a
+                            decorator or contractor. An interior designer helps plan layouts, select materials and
+                            finishes,
+                            manage details, and guide decisions so your home functions beautifully and cohesively. For
+                            renovation projects, this often includes space planning, construction coordination, and
+                            sourcing
+                            furnishings and materials.</p>
+                        <p>Guided by years of experience and deep design knowledge, we make considered interior design
+                            decisions that honor each investment while tailoring every finish and architectural choice
+                            to
+                            the unique needs of each project.</p>
 
-                    <h3>Mistakes That Can Impact Budget, Timeline, and Communication</h3>
-                    <ul>
-                        <li>Not understanding the full scope of services</li>
-                        <li>Assuming timelines without discussing them</li>
-                        <li>Waiting too long to bring a designer into the project</li>
-                    </ul>
-                    <p>One common scenario we see is a finish or material change requested late in a project. While it
-                        may seem minor, new materials must be re-sourced, confirmed for availability, ordered, and
-                        shipped, often impacting the overall timeline more than clients expect.</p>
-                </div>
-            </article>
+                        <h3>Questions to Ask Before Hiring an Interior Designer</h3>
+                        <p>Before committing, it’s important to understand how a designer works and whether their
+                            approach
+                            aligns with your expectations. Clear answers to these questions signal professionalism and
+                            experience.</p>
 
-            <!-- Blog Post 4 -->
-            <article class="blog-post">
-                <div class="blog-post-content">
-                    <h2>Signs You’ve Found the Right Interior Designer</h2>
-                    <p>The right designer will make the process feel clear, not confusing. These indicators usually
-                        point to a professional who can manage both the creative and logistical sides of a project.</p>
+                        <h4>Key Questions to Ask Before Your First Consultation</h4>
+                        <ul>
+                            <li>What is your design process from start to finish?</li>
+                            <li>How are projects structured and priced?</li>
+                            <li>How involved will I be in the decision-making process?</li>
+                            <li>What does communication look like throughout the project?</li>
+                            <li>How are design decisions, changes, and approvals managed throughout the project?</li>
+                        </ul>
+                        <div class="blog-quote">
+                            "Understanding this upfront creates clarity around timelines, budgets, and communication,
+                            leading to a more seamless design experience."
+                        </div>
 
-                    <h3>What a Well-Run Design Process Feels Like</h3>
-                    <ul>
-                        <li>A clearly defined process</li>
-                        <li>Transparent expectations around pricing and timelines</li>
-                        <li>Strong communication and organization</li>
-                        <li>Confidence in guiding decisions without pressure</li>
-                    </ul>
-                    <p>We prioritize clarity throughout the design process. As the project progresses, clients often
-                        feel reassured and supported, confident that both the creative vision and logistical details are
-                        being handled seamlessly.</p>
-                </div>
-            </article>
+                        <h3>Common Mistakes Homeowners Make When Hiring a Designer</h3>
+                        <p>One of the biggest mistakes homeowners make is choosing a designer based on photos alone.
+                            While
+                            aesthetics matter, process and communication are just as important. Avoiding these mistakes
+                            early can save time, money, and stress.</p>
 
-            <!-- Blog Post 5 -->
-            <article class="blog-post">
-                <div class="blog-post-content">
-                    <h2>What Working With Our Interior Design Studio Looks Like</h2>
-                    <p>Every design firm works differently, which is why understanding the process matters. At our
-                        studio, we guide clients through a structured design process that prioritizes clarity,
-                        collaboration, and thoughtful execution. From the initial consultation through final
-                        installation, our goal is to create spaces that reflect your lifestyle while managing the
-                        details along the way.</p>
-                    <p>Our design philosophy centers on clarity and thoughtful execution. Projects move through a
-                        refined process, from concept and space planning to detailed documentation and final
-                        installation, designed for clients seeking a full-service, highly considered interior design
-                        experience.</p>
+                        <h4>Mistakes That Can Impact Budget, Timeline, and Communication</h4>
+                        <ul>
+                            <li>Not understanding the full scope of services</li>
+                            <li>Assuming timelines without discussing them</li>
+                            <li>Waiting too long to bring a designer into the project</li>
+                        </ul>
+                        <p>One common scenario we see is a finish or material change requested late in a project. While
+                            it
+                            may seem minor, new materials must be re-sourced, confirmed for availability, ordered, and
+                            shipped, often impacting the overall timeline more than clients expect.</p>
 
-                    <h3>How to Get Started</h3>
-                    <p>The first step is typically a consultation, where you’ll discuss your goals, timeline, and scope
-                        of work. This allows both you and the designer to determine if the fit is right before moving
-                        forward.</p>
-                    <p>If you’re planning a home renovation and want expert guidance from the start, we invite you to
-                        explore our services or schedule a consultation. Consultations are scheduled through our website
-                        and allow both parties to determine the best path forward.</p>
+                        <h3>Signs You’ve Found the Right Interior Designer</h3>
+                        <p>The right designer will make the process feel clear, not confusing. These indicators usually
+                            point to a professional who can manage both the creative and logistical sides of a project.
+                        </p>
 
-                    <div style="text-align: center; margin-top: 40px;">
-                        <a href="index.html#contact" class="cta-button">Book a Consultation</a>
+                        <h4>What a Well-Run Design Process Feels Like</h4>
+                        <ul>
+                            <li>A clearly defined process</li>
+                            <li>Transparent expectations around pricing and timelines</li>
+                            <li>Strong communication and organization</li>
+                            <li>Confidence in guiding decisions without pressure</li>
+                        </ul>
+                        <p>We prioritize clarity throughout the design process. As the project progresses, clients often
+                            feel reassured and supported, confident that both the creative vision and logistical details
+                            are
+                            being handled seamlessly.</p>
+
+                        <h3>What Working With Our Interior Design Studio Looks Like</h3>
+                        <p>Every design firm works differently, which is why understanding the process matters. At our
+                            studio, we guide clients through a structured design process that prioritizes clarity,
+                            collaboration, and thoughtful execution. From the initial consultation through final
+                            installation, our goal is to create spaces that reflect your lifestyle while managing the
+                            details along the way.</p>
+                        <p>Our design philosophy centers on clarity and thoughtful execution. Projects move through a
+                            refined process, from concept and space planning to detailed documentation and final
+                            installation, designed for clients seeking a full-service, highly considered interior design
+                            experience.</p>
+
+                        <h3>How to Get Started</h3>
+                        <p>The first step is typically a consultation, where you’ll discuss your goals, timeline, and
+                            scope
+                            of work. This allows both you and the designer to determine if the fit is right before
+                            moving
+                            forward.</p>
+                        <p>If you’re planning a home renovation and want expert guidance from the start, we invite you
+                            to
+                            explore our services or schedule a consultation. Consultations are scheduled through our
+                            website
+                            and allow both parties to determine the best path forward.</p>
+
+                        <div style="text-align: center; margin-top: 40px;">
+                            <a href="index.html#contact" class="cta-button">Book a Consultation</a>
+                        </div>
                     </div>
+
+                    <button class="read-more-btn" data-post="post-1">Read More</button>
                 </div>
             </article>
         </div>
     </main>
+
+    <!-- Email Modal -->
+    <div id="email-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <i class="fas fa-envelope-open-text"
+                style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
+            <h3>Unlock Full Access</h3>
+            <p>Please enter your email address to read the complete blog post and get more interior design insights.</p>
+            <form id="blog-email-form" class="email-form">
+                <input type="email" id="subscriber-email" placeholder="Your Email Address" required>
+                <button type="submit" class="cta-button">Read Full Post</button>
+            </form>
+            <p id="modal-status" style="margin-top: 15px; font-size: 0.9rem; color: var(--accent-gold);"></p>
+        </div>
+    </div>
+
+    <!-- Hidden iframe for Google Form submission -->
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <footer>
         <div class="container">
