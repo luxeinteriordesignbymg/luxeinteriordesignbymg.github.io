@@ -2,13 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Navbar Scroll Effect ---
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+    const hasHero = document.querySelector('#hero');
+
+    if (navbar) {
+        console.log("Navbar controller initialized. Hero exists:", !!hasHero);
+        function updateNavbar() {
+            if (!hasHero || window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         }
-    });
+
+        window.addEventListener('scroll', updateNavbar);
+        updateNavbar(); // Set initial state
+    } else {
+        console.error("Navbar element not found!");
+    }
 
     // --- Hamburger Menu for Mobile ---
     const hamburger = document.querySelector('.hamburger');
