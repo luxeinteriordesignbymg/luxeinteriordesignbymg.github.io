@@ -81,7 +81,7 @@ body {
 }
 
 .logo img {
-    height: 45px; /* Reduced from 50px for more balanced default size */
+    height: 58px; /* Increased from 45px for a more prominent logo */
     width: auto;
     display: block;
     transition: all 0.3s ease;
@@ -89,7 +89,7 @@ body {
 
 /* Slimmer logo when scrolled for a professional, compact feel */
 .navbar.scrolled .logo img {
-    height: 32px; /* Reduced from 40px for sleeker sub-pages/scrolled state */
+    height: 42px; /* Increased from 32px to keep it balanced with the larger default size */
     mix-blend-mode: multiply;
 }
 
