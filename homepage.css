@@ -47,12 +47,6 @@
     object-fit: cover;
     object-position: center 58%;
 }
-.homepage #hero::after {
-    content: "";
-    position: absolute;
-    inset: 90px 0 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(21, 24, 20, .62));
-}
 .homepage .hero-content {
     position: relative;
     z-index: 1;
@@ -102,7 +96,7 @@
     .homepage .navbar { padding: 14px 0; }
     .homepage .logo img { height: 44px; }
     .homepage #hero { min-height: 560px; padding: 110px 7vw 42px; }
-    .hero-image, .homepage #hero::after { top: 72px; }
+    .hero-image { top: 72px; }
     .hero-image { height: calc(100% - 72px); object-position: 56% center; }
     .homepage .hero-content p { font-size: .6rem; letter-spacing: 2px; }
     .homepage .column-image, .homepage .column-text { width: 100%; }
