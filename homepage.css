@@ -1,0 +1,113 @@
+/* Homepage: a quiet frame for the studio's own photography. */
+.homepage .navbar {
+    background: #f7f5f0;
+    padding: 18px 0;
+}
+.homepage .navbar .container {
+    max-width: none;
+    padding: 0 4vw;
+    gap: 24px;
+}
+.homepage .navbar .nav-menu a,
+.homepage .navbar .social-icons a,
+.homepage .navbar .hamburger {
+    color: #34332e;
+}
+.homepage .nav-menu a {
+    font-size: .68rem;
+    letter-spacing: 1.5px;
+    margin: 0 12px;
+}
+.homepage .logo img {
+    height: 54px;
+    mix-blend-mode: multiply;
+}
+.homepage .navbar.scrolled {
+    padding: 10px 0;
+    box-shadow: none;
+    border-bottom: 1px solid #e3dfd6;
+}
+.homepage #hero {
+    position: relative;
+    height: 100vh;
+    height: 100svh;
+    min-height: 620px;
+    padding: 140px 6vw 65px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: left;
+    background: #696b61;
+    overflow: hidden;
+}
+.hero-image {
+    position: absolute;
+    inset: 90px 0 0;
+    width: 100%;
+    height: calc(100% - 90px);
+    object-fit: cover;
+    object-position: center 58%;
+}
+.homepage #hero::after {
+    content: "";
+    position: absolute;
+    inset: 90px 0 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(21, 24, 20, .62));
+}
+.homepage .hero-content {
+    position: relative;
+    z-index: 1;
+}
+.homepage .hero-content p {
+    font-size: .7rem;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+.homepage .hero-content h1 {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -.5px;
+    margin-bottom: 28px;
+}
+.hero-link {
+    color: white;
+    font-size: .68rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, .7);
+}
+.hero-link span { font-size: 1.2rem; }
+.hero-link:hover { border-color: white; }
+.homepage :focus-visible { outline: 2px solid #8c7155; outline-offset: 6px; }
+.homepage .hero-link:focus-visible { outline-color: white; }
+.homepage .section { scroll-margin-top: 90px; }
+.homepage .column-image, .homepage .column-text,
+.homepage .contact-details, .homepage .contact-form { min-width: 0; }
+.homepage .contact-item span { overflow-wrap: anywhere; min-width: 0; }
+.homepage .contact-item i { flex-shrink: 0; }
+.homepage .services-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+@media (max-width: 1100px) and (min-width: 993px) {
+    .homepage .nav-menu a { margin: 0 7px; }
+    .homepage .navbar .social-icons { display: none; }
+}
+@media (max-width: 992px) {
+    .homepage .nav-menu { background: #f7f5f0; }
+    .homepage .nav-menu a { margin: 16px 0; font-size: 1rem; }
+}
+@media (max-width: 600px) {
+    .homepage .navbar { padding: 14px 0; }
+    .homepage .logo img { height: 44px; }
+    .homepage #hero { min-height: 560px; padding: 110px 7vw 42px; }
+    .hero-image, .homepage #hero::after { top: 72px; }
+    .hero-image { height: calc(100% - 72px); object-position: 56% center; }
+    .homepage .hero-content p { font-size: .6rem; letter-spacing: 2px; }
+    .homepage .column-image, .homepage .column-text { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .homepage *, .homepage *::after { transition: none; }
+}

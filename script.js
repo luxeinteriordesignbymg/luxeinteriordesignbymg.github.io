@@ -24,18 +24,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // --- Close menu when a link is clicked ---
-    document.querySelectorAll('.nav-menu a').forEach(navLink => {
-        navLink.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+    if (hamburger && navMenu) {
+        function setMenuOpen(open) {
+            hamburger.classList.toggle('active', open);
+            navMenu.classList.toggle('active', open);
+            hamburger.setAttribute('aria-expanded', String(open));
+            hamburger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        }
+        hamburger.addEventListener('click', () => {
+            setMenuOpen(!navMenu.classList.contains('active'));
         });
-    });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+                setMenuOpen(false);
+                hamburger.focus();
+            }
+        });
+    }
 
     // --- Blog "Read More" and Email Modal Logic ---
     const modal = document.getElementById('email-modal');

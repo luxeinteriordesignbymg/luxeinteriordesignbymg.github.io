@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxe Interiors by MG</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="preload" as="image" href="assets/img/homepage-dining.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,12 +16,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body>
+<body class="homepage">
 
     <header class="navbar">
         <div class="container">
             <a href="#" class="logo"><img src="assets/img/logo.png" alt="Luxe Interior Design Logo"></a>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="primary-navigation" aria-label="Main navigation">
                 <a href="#hero">HOME</a>
                 <a href="#about">ABOUT</a>
                 <a href="#services">SERVICES</a>
@@ -33,7 +35,7 @@
                         class="fab fa-instagram"></i></a>
                 <a href="mailto:luxeinteriordesignbymg@gmail.com"><i class="fa-regular fa-envelope"></i></a>
             </div>
-            <button class="hamburger">
+            <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -41,10 +43,13 @@
 
     <main>
         <section id="hero">
+            <img class="hero-image" src="assets/img/homepage-dining.jpg"
+                alt="Elegant dining room with sculptural lighting, a glass dining table, and views of the hills"
+                width="2400" height="1931" fetchpriority="high">
             <div class="hero-content">
-                <h1>Luxe Interior Design</h1>
-                <p>BY MG</p>
-                <a href="#portfolio" class="cta-button">OUR PROJECTS</a>
+                <p> LUXE INTERIOR DESIGN BY MG </p>
+                <h1>Thoughtfully designed.<br>Beautifully lived.</h1>
+                <a href="#portfolio" class="hero-link">EXPLORE OUR PROJECTS <span aria-hidden="true">&rarr;</span></a>
             </div>
         </section>
 
