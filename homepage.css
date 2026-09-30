@@ -29,6 +29,8 @@
 .hero-link, .homepage .cta-button { display: inline-block; background: #000; color: #f5f5f0; border: 1px solid #000; text-decoration: none; font: 600 12px var(--font-body); text-transform: none; letter-spacing: 0; padding: 18px 28px; transition: background .2s, color .2s; }
 .hero-link:hover, .homepage .cta-button:hover { background: #453b32; color: #f5f5f0; border-color: #453b32; }
 .homepage .hero-content h1 { text-shadow: 0 1px 4px rgba(0, 0, 0, .65); margin-bottom: 0; }
+.hero-copy { max-width: 900px; min-width: 0; }
+.homepage .hero-statement { font-family: var(--font-heading); font-size: clamp(18px, 1.6vw, 24px); font-weight: 400; line-height: 1.5; letter-spacing: 0; margin: 16px 0 0; max-width: 760px; text-shadow: 0 1px 4px rgba(0, 0, 0, .65); }
 .homepage .hero-content .hero-link { background: #f5f5f0; color: #000; border-color: #f5f5f0; padding: 8px 12px; font-size: 11px; flex-shrink: 0; }
 .homepage .hero-content .hero-link:hover { background: #e8e5df; border-color: #e8e5df; }
 .homepage .section { padding: 100px 0; scroll-margin-top: 20px; }
@@ -100,6 +102,11 @@
     .homepage footer .studio-footer { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 40px; text-align: left; }
     .footer-intro { grid-column: 1/-1; }
     .homepage footer .footer-bottom { flex-direction: column; align-items: flex-start; text-align: left; }
+}
+@media (max-width: 480px) {
+    .homepage .hero-content { position: relative; background: #827059; padding: 24px 6vw; }
+    .homepage .hero-content h1 { font-size: 26px; text-shadow: none; }
+    .homepage .hero-statement { font-size: 18px; text-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
