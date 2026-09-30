@@ -1,13 +1,13 @@
 /* --- Global Styles & Variables --- */
 :root {
     /* --- Light Mode Color Scheme --- */
-    --bg-light: #FFFFFF;
-    --text-dark: #333333;
-    --accent-gold: #c5a47e;
-    --card-bg-light: #f9f9f9;
-    --border-light: #dddddd;
+    --bg-light: #f5f5f0;
+    --text-dark: #453b32;
+    --accent-gold: #827059;
+    --card-bg-light: #e8e5df;
+    --border-light: #d2ccc3;
 
-    --font-heading: 'Cormorant Garamond', serif;
+    --font-heading: Baskerville, 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Montserrat', sans-serif;
 }
 
@@ -450,4 +450,15 @@ footer p {
     .contact-wrapper {
         flex-direction: column;
     }
+}
+/* Shared studio palette for project and journal pages. */
+body:not(.homepage) .navbar,
+body:not(.homepage) .navbar.scrolled { background: #827059; box-shadow: none; }
+body:not(.homepage) .navbar .nav-menu a,
+body:not(.homepage) .navbar .social-icons a,
+body:not(.homepage) .navbar .hamburger { color: #f5f5f0; }
+body:not(.homepage) .cta-button { background: #000; border-color: #000; color: #f5f5f0; }
+body:not(.homepage) .cta-button:hover { background: #453b32; border-color: #453b32; color: #f5f5f0; }
+@media (max-width: 992px) {
+    body:not(.homepage) .nav-menu { background: #827059; }
 }
