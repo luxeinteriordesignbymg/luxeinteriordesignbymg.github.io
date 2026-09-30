@@ -24,12 +24,12 @@
 .homepage #hero { position: relative; height: auto; min-height: 0; display: block; padding: 0; background: #f5f5f0; color: #453b32; text-align: center; }
 .hero-image { display: block; width: 100%; height: auto; filter: none; opacity: 1; mix-blend-mode: normal; }
 .homepage #hero::before, .homepage #hero::after { content: none; }
-.homepage .hero-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 32px 4vw 40px; color: #f5f5f0; }
+.homepage .hero-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 32px 4vw 40px; color: #f5f5f0; display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; text-align: left; }
 .homepage .hero-content h1 { font-family: var(--font-heading); font-size: clamp(28px, 3.2vw, 48px); line-height: 1.2; font-weight: 400; letter-spacing: .5px; margin-bottom: 20px; }
 .hero-link, .homepage .cta-button { display: inline-block; background: #000; color: #f5f5f0; border: 1px solid #000; text-decoration: none; font: 600 12px var(--font-body); text-transform: none; letter-spacing: 0; padding: 18px 28px; transition: background .2s, color .2s; }
 .hero-link:hover, .homepage .cta-button:hover { background: #453b32; color: #f5f5f0; border-color: #453b32; }
-.homepage .hero-content h1 { text-shadow: 0 1px 4px rgba(0, 0, 0, .65); }
-.homepage .hero-content .hero-link { background: #f5f5f0; color: #000; border-color: #f5f5f0; padding: 12px 20px; font-size: 11px; }
+.homepage .hero-content h1 { text-shadow: 0 1px 4px rgba(0, 0, 0, .65); margin-bottom: 0; }
+.homepage .hero-content .hero-link { background: #f5f5f0; color: #000; border-color: #f5f5f0; padding: 12px 20px; font-size: 11px; flex-shrink: 0; }
 .homepage .hero-content .hero-link:hover { background: #e8e5df; border-color: #e8e5df; }
 .homepage .section { padding: 100px 0; scroll-margin-top: 20px; }
 .homepage .two-column { gap: 7vw; align-items: center; }
@@ -88,7 +88,8 @@
 @media (max-width: 768px) {
     .homepage .studio-wordmark span { font-size: 34px; }
     .homepage .studio-wordmark small { font-size: 7px; letter-spacing: 2px; }
-    .homepage .hero-content { padding: 25px 6vw 32px; }
+    .homepage .hero-content { padding: 25px 6vw 32px; flex-direction: column; align-items: stretch; gap: 18px; }
+    .homepage .hero-content .hero-link { align-self: flex-end; }
     .homepage .hero-content h1 { font-size: 30px; }
     .homepage .section { padding: 60px 0; }
     .homepage .container { padding-left: 6vw; padding-right: 6vw; }
