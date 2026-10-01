@@ -6,234 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Luxe Interior Design by MG</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homepage.css?v=16">
+    <link rel="stylesheet" href="blog.css?v=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        .blog-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 120px 20px 80px;
-        }
-
-        .blog-post {
-            margin-bottom: 80px;
-            background: #fff;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-post img {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 5px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.5s ease;
-        }
-
-        .blog-post:hover img {
-            transform: scale(1.02);
-        }
-
-        .blog-post-content h2 {
-            font-family: var(--font-heading);
-            font-size: 2.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .blog-post-content p {
-            margin-bottom: 20px;
-            text-align: justify;
-            color: #555;
-        }
-
-        .blog-post-content h3 {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            margin: 30px 0 15px;
-            color: var(--text-dark);
-        }
-
-        .blog-post-content ul {
-            margin-bottom: 20px;
-            padding-left: 20px;
-        }
-
-        .blog-post-content li {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .blog-post-content a:not(.cta-button) {
-            color: var(--accent-gold);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .blog-post-content a:not(.cta-button):hover {
-            text-decoration: underline;
-            color: var(--text-dark);
-        }
-
-        .blog-quote {
-            border-left: 4px solid var(--accent-gold);
-            padding-left: 20px;
-            font-style: italic;
-            margin: 30px 0;
-            color: #666;
-        }
-
-        /* --- Read More & Truncation --- */
-        .blog-post-full {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .blog-post-full.show {
-            display: block;
-            opacity: 1;
-        }
-
-        .read-more-btn {
-            display: inline-block;
-            background-color: var(--accent-gold);
-            color: #FFFFFF;
-            padding: 10px 25px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
-            border: 2px solid var(--accent-gold);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-
-        .read-more-btn:hover {
-            background-color: transparent;
-            color: var(--accent-gold);
-        }
-
-        /* --- Modal Styles --- */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: #fff;
-            padding: 40px;
-            max-width: 500px;
-            width: 90%;
-            border-radius: 5px;
-            position: relative;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .modal-content h3 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: var(--accent-gold);
-        }
-
-        .modal-content p {
-            margin-bottom: 25px;
-            color: #666;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #999;
-            transition: color 0.3s ease;
-        }
-
-        .close-modal:hover {
-            color: var(--text-dark);
-        }
-
-        .email-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .email-form input {
-            padding: 12px;
-            border: 1px solid var(--border-light);
-            font-family: var(--font-body);
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .email-form input:focus {
-            border-color: var(--accent-gold);
-        }
-
-        @media (max-width: 768px) {
-            .blog-post-content h2 {
-                font-size: 2rem;
-            }
-
-            .blog-post img {
-                height: 300px;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body class="homepage journal-page">
 
-    <header class="navbar scrolled">
+    <header class="navbar">
         <div class="container">
-            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Luxe Interior Design Logo"></a>
-            <nav class="nav-menu">
-                <a href="index.html#hero">HOME</a>
+            <a href="index.html#hero" class="logo studio-wordmark" aria-label="Luxe Interior Design by MG home"><span>LUXE</span><small>INTERIOR DESIGN BY MG</small></a>
+            <nav class="nav-menu" id="primary-navigation" aria-label="Main navigation">
+                <a href="index.html#portfolio">SELECT WORKS</a>
                 <a href="index.html#about">ABOUT</a>
                 <a href="services.html">SERVICES</a>
                 <a href="assets/pdf/Luxe Interior Design by MG process.pdf" target="_blank">PROCESS</a>
-                <a href="index.html#portfolio">PROJECTS</a>
-                <a href="blog.html">BLOG</a>
-                <a href="index.html#contact">CONTACT</a>
+                <a href="blog.html" aria-current="page">BLOG</a>
+                <a href="index.html#contact" class="nav-contact">Work With Us</a>
             </nav>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/luxeinteriordesignbymg/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="mailto:luxeinteriordesignbymg@gmail.com"><i class="fa-regular fa-envelope"></i></a>
-            </div>
-            <button class="hamburger">
+            <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -241,9 +37,14 @@
 
     <main>
         <div class="blog-container">
+            <header class="journal-intro">
+                <p class="journal-eyebrow">INSIGHTS FROM THE STUDIO</p>
+                <h1>The Design Journal</h1>
+                <p class="journal-description">Thoughtful perspectives on interiors, renovations, and the art of creating a space that feels like you.</p>
+            </header>
             <!-- New Blog Post: Why Renovations Feel Overwhelming (And How the Right Design Process Changes Everything) -->
             <article class="blog-post" id="post-4">
-                <img src="assets/img/blog/hard_renovation.jpg" alt="Overwhelming Renovation Process">
+                <img src="assets/img/blog/hard_renovation.jpg" alt="Overwhelming Renovation Process" decoding="async">
                 <div class="blog-post-content">
                     <h2>Why Renovations Feel Overwhelming (And How the Right Design Process Changes Everything)</h2>
 
@@ -337,7 +138,7 @@
 
             <!-- New Blog Post: How Much Does a Full-Service Interior Designer Cost in 2026? -->
             <article class="blog-post" id="post-3">
-                <img src="assets/img/blog/blog3_2.png" alt="Luxury Interior Design Pricing 2026">
+                <img src="assets/img/blog/blog3_2.png" alt="Luxury Interior Design Pricing 2026" loading="lazy" decoding="async">
                 <div class="blog-post-content">
                     <h2>How Much Does a Full-Service Interior Designer Cost in 2026? (What Luxury Homeowners Should
                         Expect)</h2>
@@ -496,8 +297,7 @@
                             white-glove execution to deliver homes that are elevated, cohesive, and deeply personal.</p>
 
                         <div style="text-align: center; margin-top: 40px;">
-                            <img src="assets/img/blog/blog3_1.JPG" alt="Luxury Design Clarity"
-                                style="width: 100%; max-width: 600px; height: auto; margin: 0 auto 20px; display: block; border-radius: 5px;">
+                            <img src="assets/img/blog/blog3_1.JPG" alt="Luxury Design Clarity" loading="lazy" decoding="async">
                             <p><strong>A well-designed home begins with clarity. And clarity begins with the right
                                     partner.</strong></p>
                             <a href="index.html#contact" class="cta-button">Book a Consultation</a>
@@ -510,7 +310,7 @@
 
             <!-- Main Unified Blog Post -->
             <article class="blog-post" id="post-1">
-                <img src="assets/img/blog/consultation.png" alt="Interior Designer Meeting">
+                <img src="assets/img/blog/consultation.png" alt="Interior Designer Meeting" loading="lazy" decoding="async">
                 <div class="blog-post-content">
                     <h2>How to Hire the Right Interior Designer for Your Home Renovation</h2>
 
@@ -625,8 +425,7 @@
 
             <!-- New Blog Post: Designing a Spa Worthy Bathroom -->
             <article class="blog-post" id="post-2">
-                <img src="assets/img/blog/bathroom1.png" alt="Luxurious Spa-Like Bathroom"
-                    style="width: 100%; max-width: 600px; height: auto; margin: 0 auto; display: block; object-fit: contain;">
+                <img src="assets/img/blog/bathroom1.png" alt="Luxurious Spa-Like Bathroom" loading="lazy" decoding="async">
                 <div class="blog-post-content">
                     <h2>Designing a Spa Worthy Bathroom</h2>
 
@@ -659,12 +458,9 @@
                             marble, granite, or limestone adds depth, sophistication, and timeless appeal to
                             countertops, floors, and shower walls. These materials not only elevate the visual impact
                             but also enhance durability and long-term value.</p>
-                        <div class="blog-post-extra-images"
-                            style="display: flex; gap: 20px; margin: 30px 0; justify-content: center;">
-                            <img src="assets/img/blog/bathroom2.png" alt="Modern Bathroom Fixtures"
-                                style="width: 45%; height: auto; object-fit: contain; border-radius: 5px;">
-                            <img src="assets/img/blog/bathroom3.png" alt="Elegant Bathroom Finishes"
-                                style="width: 45%; height: auto; object-fit: contain; border-radius: 5px;">
+                        <div class="blog-post-extra-images">
+                            <img src="assets/img/blog/bathroom2.png" alt="Modern Bathroom Fixtures" loading="lazy" decoding="async">
+                            <img src="assets/img/blog/bathroom3.png" alt="Elegant Bathroom Finishes" loading="lazy" decoding="async">
                         </div>
                         <p>Quartz surfaces, custom millwork, and premium finishes further contribute to a polished look.
                             When paired with expertly crafted fixtures, high-quality materials create a bathroom that
@@ -728,17 +524,17 @@
 
     <!-- Email Modal -->
     <div id="email-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="email-modal-title">
+            <button type="button" class="close-modal" aria-label="Close dialog">&times;</button>
             <i class="fas fa-envelope-open-text"
                 style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
-            <h3>Unlock Full Access</h3>
+            <h3 id="email-modal-title">Unlock Full Access</h3>
             <p>Please enter your email address to read the complete blog post and get more interior design insights.</p>
             <form id="blog-email-form" class="email-form">
-                <input type="email" id="subscriber-email" placeholder="Your Email Address" required>
+                <input type="email" id="subscriber-email" aria-label="Your email address" autocomplete="email" placeholder="Your Email Address" required>
                 <button type="submit" class="cta-button">Read Full Post</button>
             </form>
-            <p id="modal-status" style="margin-top: 15px; font-size: 0.9rem; color: var(--accent-gold);"></p>
+            <p role="status" id="modal-status" style="margin-top: 15px; font-size: 0.9rem; color: var(--accent-gold);"></p>
         </div>
     </div>
 
@@ -746,14 +542,13 @@
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Luxe Interior Design By MG.</p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/luxeinteriordesignbymg/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="mailto:luxeinteriordesignbymg@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
+        <div class="container studio-footer">
+            <div class="footer-intro"><a href="index.html#hero" class="studio-wordmark"><span>LUXE</span><small>INTERIOR DESIGN BY MG</small></a><p>Artistry, individuality, and thoughtful design. Residential and commercial interiors that reflect the way you live.</p></div>
+            <div><h3>Explore</h3><a href="index.html#about">ABOUT</a><a href="services.html">SERVICES</a><a href="index.html#portfolio">PROJECTS</a></div>
+            <div><h3>Studio</h3><a href="assets/pdf/Luxe Interior Design by MG process.pdf" target="_blank" rel="noopener">OUR PROCESS</a><a href="blog.html">JOURNAL</a><a href="index.html#contact">WORK WITH US</a></div>
+            <div><h3>Connect</h3><a href="https://www.instagram.com/luxeinteriordesignbymg/" target="_blank" rel="noopener">INSTAGRAM</a><a href="tel:+19495086360">(949) 508-6360</a><a href="mailto:luxeinteriordesignbymg@gmail.com">EMAIL THE STUDIO</a></div>
         </div>
+        <div class="container footer-bottom"><p>&copy; 2026 Luxe Interior Design by MG.</p><a href="mailto:luxeinteriordesignbymg@gmail.com">luxeinteriordesignbymg@gmail.com</a></div>
     </footer>
 
     <script src="script.js"></script>
