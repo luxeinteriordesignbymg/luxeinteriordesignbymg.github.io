@@ -31,7 +31,7 @@
 .hero-link:hover, .homepage .cta-button:hover { background: #453b32; color: #f5f5f0; border-color: #453b32; }
 .hero-copy { max-width: 1100px; margin: 0 auto; }
 .homepage .hero-statement { font-family: var(--font-heading); font-size: 20px; font-weight: 400; line-height: 1.5; letter-spacing: 0; margin: 14px auto 0; max-width: 800px; }
-.homepage .hero-consultation { position: absolute; left: 50%; bottom: clamp(16px, 3vw, 40px); transform: translateX(-50%); background: #f5f5f0; color: #000; border-color: #f5f5f0; padding: 8px 12px; font-size: 11px; white-space: nowrap; }
+.homepage .hero-consultation { position: absolute; left: 50%; bottom: clamp(16px, 3vw, 40px); transform: translateX(-50%); background: #f5f5f0; color: #000; border-color: #f5f5f0; padding: 11px 18px; font-size: 12px; white-space: nowrap; }
 .homepage .hero-consultation:hover { background: #e8e5df; border-color: #e8e5df; }
 .homepage .section { padding: 100px 0; scroll-margin-top: 20px; }
 .homepage .two-column { gap: 7vw; align-items: center; }
