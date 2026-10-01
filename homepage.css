@@ -102,6 +102,8 @@
     .homepage .studio-wordmark span { font-size: 34px; }
     .homepage .studio-wordmark small { font-size: 7px; letter-spacing: 2px; }
     .homepage .hero-content { padding: 24px 6vw; }
+    .homepage .hero-consultation { padding: 6px 8px; font-size: 10px; }
+    .homepage .hero-consultation::before { content: ''; position: absolute; inset: -9px -4px; }
     .homepage .hero-content h1 { font-size: 26px; }
     .homepage .hero-statement { font-size: 18px; }
     .homepage .section { padding: 60px 0; }
