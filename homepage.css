@@ -128,8 +128,8 @@
 /* Homepage brand image, including the approved by MG signature. */
 .homepage .navbar.brand-image-header { padding: 14px 0; }
 .homepage .navbar .studio-logo { flex-shrink: 0; }
-.homepage .navbar .studio-logo img { width: 132px; height: auto; mix-blend-mode: normal; }
+.homepage .navbar .studio-logo img { width: 106px; height: auto; mix-blend-mode: normal; }
 @media (max-width: 768px) {
     .homepage .navbar.brand-image-header { padding: 12px 0; }
-    .homepage .navbar .studio-logo img { width: 108px; }
+    .homepage .navbar .studio-logo img { width: 86px; }
 }
