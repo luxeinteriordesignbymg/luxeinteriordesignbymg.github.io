@@ -315,6 +315,12 @@ body {
     font-weight: 700;
 }
 
+/* Display the complete Services page photograph at its original proportions. */
+.services-page .services-cover-full {
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
     .new-portfolio-grid {
         grid-template-columns: 1fr; /* Stack on mobile */
