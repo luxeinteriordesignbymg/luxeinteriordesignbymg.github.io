@@ -299,6 +299,7 @@ body {
 
 .portfolio-overlay {
     position: absolute;
+    text-align: center;
     bottom: 0;
     left: 0;
     width: 100%;
