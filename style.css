@@ -315,8 +315,8 @@ body {
     font-weight: 700;
 }
 
-/* Display the complete Services page photograph at its original proportions. */
-.services-page .services-cover-full {
+/* Display the complete Services photograph at its original proportions. */
+.homepage #services .services-cover-full {
     aspect-ratio: auto;
     object-fit: contain;
 }
